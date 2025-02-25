@@ -12,6 +12,9 @@ targets:
     oppulence-backend-sdk:
         target: typescript
         source: Lead Scraping Service API
+        publish:
+            npm:
+                token: $npm_token
         codeSamples:
             registry:
                 location: registry.speakeasyapi.dev/oppulence-backend/oppulence/lead-scraping-service-api-typescript-code-samples
