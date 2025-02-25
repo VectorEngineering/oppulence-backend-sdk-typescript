@@ -2,8 +2,8 @@ speakeasyVersion: 1.502.0
 sources:
     Lead Scraping Service API:
         sourceNamespace: lead-scraping-service-api
-        sourceRevisionDigest: sha256:c9001df90eaeac26b0e6d6a03452ea6ee235911162bb798290859ff1b00d3394
-        sourceBlobDigest: sha256:a3802279e935d73f8a306ddb141090246f75f55462a0e61707e2d68ce906ae5d
+        sourceRevisionDigest: sha256:2f4b4bc9dd4f1e11997ccd4f2e9a746050b489f71d0d97c5214179b10a1de33c
+        sourceBlobDigest: sha256:213ddf477df4ed15ba7426e3e8d8f26f92b732b506434fe11c52f01e4fd3cd11
         tags:
             - latest
             - "1.0"
@@ -11,10 +11,10 @@ targets:
     oppulence-backend-sdk:
         source: Lead Scraping Service API
         sourceNamespace: lead-scraping-service-api
-        sourceRevisionDigest: sha256:c9001df90eaeac26b0e6d6a03452ea6ee235911162bb798290859ff1b00d3394
-        sourceBlobDigest: sha256:a3802279e935d73f8a306ddb141090246f75f55462a0e61707e2d68ce906ae5d
+        sourceRevisionDigest: sha256:2f4b4bc9dd4f1e11997ccd4f2e9a746050b489f71d0d97c5214179b10a1de33c
+        sourceBlobDigest: sha256:213ddf477df4ed15ba7426e3e8d8f26f92b732b506434fe11c52f01e4fd3cd11
         codeSamplesNamespace: lead-scraping-service-api-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:dd7dee92823fcc8ff3796963b2859f387934d84a4b0fe3a8fb38cc1bc085593e
+        codeSamplesRevisionDigest: sha256:84c66b1d6ce86ee950ed97268dcb0d8bf86cea7171eeda92aaeddca7342316fd
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -30,6 +30,9 @@ workflow:
         oppulence-backend-sdk:
             target: typescript
             source: Lead Scraping Service API
+            publish:
+                npm:
+                    token: $npm_token
             codeSamples:
                 registry:
                     location: registry.speakeasyapi.dev/oppulence-backend/oppulence/lead-scraping-service-api-typescript-code-samples
