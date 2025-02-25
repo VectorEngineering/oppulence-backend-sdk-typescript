@@ -1,0 +1,17 @@
+# GetApiLeadScraperMicroserviceApiV1WebhooksData
+
+## Example Usage
+
+```typescript
+import { GetApiLeadScraperMicroserviceApiV1WebhooksData } from "oppulence-backend-sdk/models/operations";
+
+let value: GetApiLeadScraperMicroserviceApiV1WebhooksData = {};
+```
+
+## Fields
+
+| Field                                                                                                                                            | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `webhooks`                                                                                                                                       | [operations.GetApiLeadScraperMicroserviceApiV1WebhooksWebhooks](../../models/operations/getapileadscrapermicroserviceapiv1webhookswebhooks.md)[] | :heavy_minus_sign:                                                                                                                               | N/A                                                                                                                                              |
+| `nextPageNumber`                                                                                                                                 | *number*                                                                                                                                         | :heavy_minus_sign:                                                                                                                               | N/A                                                                                                                                              |
+| `totalCount`                                                                                                                                     | *number*                                                                                                                                         | :heavy_minus_sign:                                                                                                                               | N/A                                                                                                                                              |

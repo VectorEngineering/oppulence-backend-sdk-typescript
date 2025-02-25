@@ -1,0 +1,17 @@
+# GetApiLeadScraperMicroserviceApiV1OrganizationTenantsOrganizationIdData
+
+## Example Usage
+
+```typescript
+import { GetApiLeadScraperMicroserviceApiV1OrganizationTenantsOrganizationIdData } from "oppulence-backend-sdk/models/operations";
+
+let value:
+  GetApiLeadScraperMicroserviceApiV1OrganizationTenantsOrganizationIdData = {};
+```
+
+## Fields
+
+| Field                                                                                                                                                                                            | Type                                                                                                                                                                                             | Required                                                                                                                                                                                         | Description                                                                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `tenants`                                                                                                                                                                                        | [operations.GetApiLeadScraperMicroserviceApiV1OrganizationTenantsOrganizationIdTenants](../../models/operations/getapileadscrapermicroserviceapiv1organizationtenantsorganizationidtenants.md)[] | :heavy_minus_sign:                                                                                                                                                                               | N/A                                                                                                                                                                                              |
+| `nextPageNumber`                                                                                                                                                                                 | *number*                                                                                                                                                                                         | :heavy_minus_sign:                                                                                                                                                                               | N/A                                                                                                                                                                                              |

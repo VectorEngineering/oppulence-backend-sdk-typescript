@@ -1,0 +1,17 @@
+# Payload
+
+## Example Usage
+
+```typescript
+import { Payload } from "oppulence-backend-sdk/models/operations";
+
+let value: Payload = {};
+```
+
+## Fields
+
+| Field                                                                                                                                                    | Type                                                                                                                                                     | Required                                                                                                                                                 | Description                                                                                                                                              |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `account`                                                                                                                                                | [operations.PutApiLeadScraperMicroserviceApiV1AccountsUpdateAccount](../../models/operations/putapileadscrapermicroserviceapiv1accountsupdateaccount.md) | :heavy_minus_sign:                                                                                                                                       | N/A                                                                                                                                                      |
+| `organizationId`                                                                                                                                         | *string*                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                       | N/A                                                                                                                                                      |
+| `tenantId`                                                                                                                                               | *string*                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                       | N/A                                                                                                                                                      |

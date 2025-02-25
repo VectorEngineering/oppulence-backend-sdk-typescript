@@ -1,0 +1,23 @@
+# PostApiLeadScraperMicroserviceApiV1WorkspacesWorkspaceIdWorkflowsIdPauseRequest
+
+## Example Usage
+
+```typescript
+import { PostApiLeadScraperMicroserviceApiV1WorkspacesWorkspaceIdWorkflowsIdPauseRequest } from "oppulence-backend-sdk/models/operations";
+
+let value:
+  PostApiLeadScraperMicroserviceApiV1WorkspacesWorkspaceIdWorkflowsIdPauseRequest =
+    {
+      workspaceId: "<id>",
+      id: "<id>",
+      requestBody: {},
+    };
+```
+
+## Fields
+
+| Field                                                                                                                                                                                                            | Type                                                                                                                                                                                                             | Required                                                                                                                                                                                                         | Description                                                                                                                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `workspaceId`                                                                                                                                                                                                    | *string*                                                                                                                                                                                                         | :heavy_check_mark:                                                                                                                                                                                               | N/A                                                                                                                                                                                                              |
+| `id`                                                                                                                                                                                                             | *string*                                                                                                                                                                                                         | :heavy_check_mark:                                                                                                                                                                                               | N/A                                                                                                                                                                                                              |
+| `requestBody`                                                                                                                                                                                                    | [operations.PostApiLeadScraperMicroserviceApiV1WorkspacesWorkspaceIdWorkflowsIdPauseRequestBody](../../models/operations/postapileadscrapermicroserviceapiv1workspacesworkspaceidworkflowsidpauserequestbody.md) | :heavy_check_mark:                                                                                                                                                                                               | N/A                                                                                                                                                                                                              |

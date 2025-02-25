@@ -1,0 +1,17 @@
+# GetApiLeadScraperMicroserviceApiV1WorkspacesWorkspaceIdWorkflowsData
+
+## Example Usage
+
+```typescript
+import { GetApiLeadScraperMicroserviceApiV1WorkspacesWorkspaceIdWorkflowsData } from "oppulence-backend-sdk/models/operations";
+
+let value:
+  GetApiLeadScraperMicroserviceApiV1WorkspacesWorkspaceIdWorkflowsData = {};
+```
+
+## Fields
+
+| Field                                                                                                                                                                                          | Type                                                                                                                                                                                           | Required                                                                                                                                                                                       | Description                                                                                                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `workflows`                                                                                                                                                                                    | [operations.GetApiLeadScraperMicroserviceApiV1WorkspacesWorkspaceIdWorkflowsWorkflows](../../models/operations/getapileadscrapermicroserviceapiv1workspacesworkspaceidworkflowsworkflows.md)[] | :heavy_minus_sign:                                                                                                                                                                             | N/A                                                                                                                                                                                            |
+| `nextPageNumber`                                                                                                                                                                               | *number*                                                                                                                                                                                       | :heavy_minus_sign:                                                                                                                                                                             | N/A                                                                                                                                                                                            |

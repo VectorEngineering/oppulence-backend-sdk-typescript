@@ -1,0 +1,24 @@
+# PutApiLeadScraperMicroserviceApiV1AccountsSettingsSettings
+
+## Example Usage
+
+```typescript
+import { PutApiLeadScraperMicroserviceApiV1AccountsSettingsSettings } from "oppulence-backend-sdk/models/operations";
+
+let value: PutApiLeadScraperMicroserviceApiV1AccountsSettingsSettings = {};
+```
+
+## Fields
+
+| Field                                                                                         | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `id`                                                                                          | *string*                                                                                      | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `emailNotifications`                                                                          | *boolean*                                                                                     | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `slackNotifications`                                                                          | *boolean*                                                                                     | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `defaultDataRetention`                                                                        | *string*                                                                                      | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `autoPurgeEnabled`                                                                            | *boolean*                                                                                     | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `require2fa`                                                                                  | *boolean*                                                                                     | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `sessionTimeout`                                                                              | *string*                                                                                      | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `createdAt`                                                                                   | [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `updatedAt`                                                                                   | [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `deletedAt`                                                                                   | [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) | :heavy_minus_sign:                                                                            | N/A                                                                                           |

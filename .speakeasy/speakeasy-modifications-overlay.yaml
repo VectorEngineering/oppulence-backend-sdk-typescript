@@ -1,0 +1,1416 @@
+overlay: 1.0.0
+x-speakeasy-jsonpath: rfc9535
+info:
+  title: Speakeasy Modifications
+  version: 0.0.16
+  x-speakeasy-metadata:
+    after: ""
+    before: ""
+    type: speakeasy-modifications
+actions:
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organizations/tenants/api-keys"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454158306
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organizations/tenants/api-keys/rotate"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454165837
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organizations/{organizationId}/tenants"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454170366
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/webhooks"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454176202
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/webhooks"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454180937
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/leads/{leadId}"]["get"]
+    update:
+      x-speakeasy-group: leads
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.leads.get()
+      before: sdk..get_/api/lead-scraper-microservice/api/v1/leads/{leadId}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organizations/tenants/api-keys"]["put"]
+    update:
+      x-speakeasy-group: tenantApiKeys
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.tenantApiKeys.update()
+      before: sdk..put_/api/lead-scraper-microservice/api/v1/organizations/tenants/api-keys()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organization/tenants/{organizationId}/{tenantId}"]["delete"]
+    update:
+      x-speakeasy-group: tenants
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.tenants.delete()
+      before: sdk..delete_/api/lead-scraper-microservice/api/v1/organization/tenants/{organizationId}/{tenantId}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspaces"]["get"]
+    update:
+      x-speakeasy-group: workspaces
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.workspaces.list()
+      before: sdk..get_/api/lead-scraper-microservice/api/v1/workspaces()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organization/{id}"]["get"]
+    update:
+      x-speakeasy-group: organizations
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.organizations.get()
+      before: sdk..get_/api/lead-scraper-microservice/api/v1/organization/{id}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspaces/{workspaceId}/workflows/{id}"]["get"]
+    update:
+      x-speakeasy-group: workflows
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.workflows.get()
+      before: sdk..get_/api/lead-scraper-microservice/api/v1/workspaces/{workspaceId}/workflows/{id}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organization"]["get"]
+    update:
+      x-speakeasy-group: organizations
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.organizations.list()
+      before: sdk..get_/api/lead-scraper-microservice/api/v1/organization()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspace/{id}"]["get"]
+    update:
+      x-speakeasy-group: workspaces
+      x-speakeasy-name-override: fetchById
+    x-speakeasy-metadata:
+      after: sdk.workspaces.fetchById()
+      before: sdk..get_/api/lead-scraper-microservice/api/v1/workspace/{id}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys/list"]["get"]
+    update:
+      x-speakeasy-group: apiKeys
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.apiKeys.list()
+      before: sdk..get_/api/lead-scraper-microservice/api/v1/api-keys/list()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/accounts/{id}/usage"]["get"]
+    update:
+      x-speakeasy-group: accounts
+      x-speakeasy-name-override: getUsage
+    x-speakeasy-metadata:
+      after: sdk.accounts.getUsage()
+      before: sdk..get_/api/lead-scraper-microservice/api/v1/accounts/{id}/usage()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/workspace-service/v1/workspaces/storage-stats/{workspaceId}"]["get"]
+    update:
+      x-speakeasy-group: workspaces
+      x-speakeasy-name-override: getStorageStats
+    x-speakeasy-metadata:
+      after: sdk.workspaces.getStorageStats()
+      before: sdk..get_/api/workspace-service/v1/workspaces/storage-stats/{workspaceId}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspaces/workflow"]["put"]
+    update:
+      x-speakeasy-group: workflows
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.workflows.update()
+      before: sdk..put_/api/lead-scraper-microservice/api/v1/workspaces/workflow()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/webhooks"]["get"]
+    update:
+      x-speakeasy-group: webhooks
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.webhooks.list()
+      before: sdk..get_/api/lead-scraper-microservice/api/v1/webhooks()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organizations/tenants/api-keys/rotate"]["post"]
+    update:
+      x-speakeasy-group: tenants
+      x-speakeasy-name-override: rotateApiKey
+    x-speakeasy-metadata:
+      after: sdk.tenants.rotateApiKey()
+      before: sdk..post_/api/lead-scraper-microservice/api/v1/organizations/tenants/api-keys/rotate()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/jobs"]["post"]
+    update:
+      x-speakeasy-group: jobs
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.jobs.create()
+      before: sdk..post_/api/lead-scraper-microservice/api/v1/jobs()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/workspace-service/v1/accounts/{id}"]["get"]
+    update:
+      x-speakeasy-group: accounts
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.accounts.get()
+      before: sdk..get_/api/workspace-service/v1/accounts/{id}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organizations/tenants/api-keys"]["post"]
+    update:
+      x-speakeasy-group: tenantApiKeys
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.tenantApiKeys.create()
+      before: sdk..post_/api/lead-scraper-microservice/api/v1/organizations/tenants/api-keys()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys/rotate"]["post"]
+    update:
+      x-speakeasy-group: apiKeys
+      x-speakeasy-name-override: rotate
+    x-speakeasy-metadata:
+      after: sdk.apiKeys.rotate()
+      before: sdk..post_/api/lead-scraper-microservice/api/v1/api-keys/rotate()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspaces/{workspaceId}/workflows/{id}/trigger"]["post"]
+    update:
+      x-speakeasy-group: workflows
+      x-speakeasy-name-override: trigger
+    x-speakeasy-metadata:
+      after: sdk.workflows.trigger()
+      before: sdk..post_/api/lead-scraper-microservice/api/v1/workspaces/{workspaceId}/workflows/{id}/trigger()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organizations/tenants/api-keys/list"]["get"]
+    update:
+      x-speakeasy-group: tenants
+      x-speakeasy-name-override: listApiKeys
+    x-speakeasy-metadata:
+      after: sdk.tenants.listApiKeys()
+      before: sdk..get_/api/lead-scraper-microservice/api/v1/organizations/tenants/api-keys/list()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organization"]["post"]
+    update:
+      x-speakeasy-group: organizations
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.organizations.create()
+      before: sdk..post_/api/lead-scraper-microservice/api/v1/organization()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys"]["post"]
+    update:
+      x-speakeasy-group: apiKeys
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.apiKeys.create()
+      before: sdk..post_/api/lead-scraper-microservice/api/v1/api-keys()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspaces/{workspaceId}/analytics"]["get"]
+    update:
+      x-speakeasy-group: workspaces
+      x-speakeasy-name-override: fetchAnalytics
+    x-speakeasy-metadata:
+      after: sdk.workspaces.fetchAnalytics()
+      before: sdk..get_/api/lead-scraper-microservice/api/v1/workspaces/{workspaceId}/analytics()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspaces"]["post"]
+    update:
+      x-speakeasy-group: workspaces
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.workspaces.create()
+      before: sdk..post_/api/lead-scraper-microservice/api/v1/workspaces()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organization"]["put"]
+    update:
+      x-speakeasy-group: organizations
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.organizations.update()
+      before: sdk..put_/api/lead-scraper-microservice/api/v1/organization()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organizations/tenants/{organizationId}/{tenantId}"]["get"]
+    update:
+      x-speakeasy-group: tenants
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.tenants.get()
+      before: sdk..get_/api/lead-scraper-microservice/api/v1/organizations/tenants/{organizationId}/{tenantId}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/webhooks/{webhookId}"]["delete"]
+    update:
+      x-speakeasy-group: webhooks
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.webhooks.delete()
+      before: sdk..delete_/api/lead-scraper-microservice/api/v1/webhooks/{webhookId}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organizations/tenants/api-keys/{keyId}"]["delete"]
+    update:
+      x-speakeasy-group: tenants
+      x-speakeasy-name-override: deleteApiKey
+    x-speakeasy-metadata:
+      after: sdk.tenants.deleteApiKey()
+      before: sdk..delete_/api/lead-scraper-microservice/api/v1/organizations/tenants/api-keys/{keyId}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspace/{id}"]["delete"]
+    update:
+      x-speakeasy-group: workspaces
+      x-speakeasy-name-override: removeById
+    x-speakeasy-metadata:
+      after: sdk.workspaces.removeById()
+      before: sdk..delete_/api/lead-scraper-microservice/api/v1/workspace/{id}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/jobs/{jobId}/download"]["get"]
+    update:
+      x-speakeasy-group: jobs
+      x-speakeasy-name-override: download
+    x-speakeasy-metadata:
+      after: sdk.jobs.download()
+      before: sdk..get_/api/lead-scraper-microservice/api/v1/jobs/{jobId}/download()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organizations/tenants"]["put"]
+    update:
+      x-speakeasy-group: tenants
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.tenants.update()
+      before: sdk..put_/api/lead-scraper-microservice/api/v1/organizations/tenants()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/jobs/{jobId}"]["get"]
+    update:
+      x-speakeasy-group: jobs
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.jobs.get()
+      before: sdk..get_/api/lead-scraper-microservice/api/v1/jobs/{jobId}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/accounts"]["post"]
+    update:
+      x-speakeasy-group: accounts
+      x-speakeasy-name-override: register
+    x-speakeasy-metadata:
+      after: sdk.accounts.register()
+      before: sdk..post_/api/lead-scraper-microservice/api/v1/accounts()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/workspace-service/v1/workspaces/analytics/{workspaceId}"]["get"]
+    update:
+      x-speakeasy-group: workspaces
+      x-speakeasy-name-override: getAnalytics
+    x-speakeasy-metadata:
+      after: sdk.workspaces.getAnalytics()
+      before: sdk..get_/api/workspace-service/v1/workspaces/analytics/{workspaceId}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys"]["put"]
+    update:
+      x-speakeasy-group: apiKeys
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.apiKeys.update()
+      before: sdk..put_/api/lead-scraper-microservice/api/v1/api-keys()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/workspace-service/v1/workspaces/compliance-report/{workspaceId}"]["get"]
+    update:
+      x-speakeasy-group: workspaces
+      x-speakeasy-name-override: getComplianceReport
+    x-speakeasy-metadata:
+      after: sdk.workspaces.getComplianceReport()
+      before: sdk..get_/api/workspace-service/v1/workspaces/compliance-report/{workspaceId}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspaces/{workspaceId}/workflows"]["get"]
+    update:
+      x-speakeasy-group: workspaces
+      x-speakeasy-name-override: listWorkflows
+    x-speakeasy-metadata:
+      after: sdk.workspaces.listWorkflows()
+      before: sdk..get_/api/lead-scraper-microservice/api/v1/workspaces/{workspaceId}/workflows()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/webhooks"]["post"]
+    update:
+      x-speakeasy-group: webhooks
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.webhooks.create()
+      before: sdk..post_/api/lead-scraper-microservice/api/v1/webhooks()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/accounts/{id}"]["get"]
+    update:
+      x-speakeasy-group: accounts
+      x-speakeasy-name-override: fetchById
+    x-speakeasy-metadata:
+      after: sdk.accounts.fetchById()
+      before: sdk..get_/api/lead-scraper-microservice/api/v1/accounts/{id}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/webhooks/{webhookId}"]["get"]
+    update:
+      x-speakeasy-group: webhooks
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.webhooks.get()
+      before: sdk..get_/api/lead-scraper-microservice/api/v1/webhooks/{webhookId}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/workspace-service/v1/accounts"]["post"]
+    update:
+      x-speakeasy-group: accounts
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.accounts.create()
+      before: sdk..post_/api/workspace-service/v1/accounts()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/leads"]["get"]
+    update:
+      x-speakeasy-group: leads
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.leads.list()
+      before: sdk..get_/api/lead-scraper-microservice/api/v1/leads()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/workspace-service/v1/workspaces/sharings/{workspaceId}"]["get"]
+    update:
+      x-speakeasy-group: workspaces
+      x-speakeasy-name-override: listSharings
+    x-speakeasy-metadata:
+      after: sdk.workspaces.listSharings()
+      before: sdk..get_/api/workspace-service/v1/workspaces/sharings/{workspaceId}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/accounts/list"]["get"]
+    update:
+      x-speakeasy-group: accounts
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.accounts.list()
+      before: sdk..get_/api/lead-scraper-microservice/api/v1/accounts/list()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/workspace-service/v1/workspaces/{id}"]["get"]
+    update:
+      x-speakeasy-group: workspaces
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.workspaces.get()
+      before: sdk..get_/api/workspace-service/v1/workspaces/{id}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/jobs/{jobId}"]["delete"]
+    update:
+      x-speakeasy-group: jobs
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.jobs.delete()
+      before: sdk..delete_/api/lead-scraper-microservice/api/v1/jobs/{jobId}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys/{keyId}"]["get"]
+    update:
+      x-speakeasy-group: apiKeys
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.apiKeys.get()
+      before: sdk..get_/api/lead-scraper-microservice/api/v1/api-keys/{keyId}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/workspace-service/v1/workspace-sharings"]["put"]
+    update:
+      x-speakeasy-group: workspaceSharings
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.workspaceSharings.update()
+      before: sdk..put_/api/workspace-service/v1/workspace-sharings()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organization/tenants/{organizationId}"]["get"]
+    update:
+      x-speakeasy-group: tenants
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.tenants.list()
+      before: sdk..get_/api/lead-scraper-microservice/api/v1/organization/tenants/{organizationId}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organization/{id}"]["delete"]
+    update:
+      x-speakeasy-group: organizations
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.organizations.delete()
+      before: sdk..delete_/api/lead-scraper-microservice/api/v1/organization/{id}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/workspace-service/v1/workspaces/{workspaceId}/share"]["post"]
+    update:
+      x-speakeasy-group: workspaces
+      x-speakeasy-name-override: share
+    x-speakeasy-metadata:
+      after: sdk.workspaces.share()
+      before: sdk..post_/api/workspace-service/v1/workspaces/{workspaceId}/share()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/webhooks"]["put"]
+    update:
+      x-speakeasy-group: webhooks
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.webhooks.update()
+      before: sdk..put_/api/lead-scraper-microservice/api/v1/webhooks()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspaces/{workspaceId}/workflows"]["post"]
+    update:
+      x-speakeasy-group: workspaces
+      x-speakeasy-name-override: createWorkflow
+    x-speakeasy-metadata:
+      after: sdk.workspaces.createWorkflow()
+      before: sdk..post_/api/lead-scraper-microservice/api/v1/workspaces/{workspaceId}/workflows()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/workspace-service/v1/accounts/{id}"]["delete"]
+    update:
+      x-speakeasy-group: accounts
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.accounts.delete()
+      before: sdk..delete_/api/workspace-service/v1/accounts/{id}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys/{keyId}"]["delete"]
+    update:
+      x-speakeasy-group: apiKeys
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.apiKeys.delete()
+      before: sdk..delete_/api/lead-scraper-microservice/api/v1/api-keys/{keyId}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/workspace-service/v1/accounts"]["put"]
+    update:
+      x-speakeasy-group: accounts
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.accounts.update()
+      before: sdk..put_/api/workspace-service/v1/accounts()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/accounts/update"]["put"]
+    update:
+      x-speakeasy-group: accounts
+      x-speakeasy-name-override: modifyDetails
+    x-speakeasy-metadata:
+      after: sdk.accounts.modifyDetails()
+      before: sdk..put_/api/lead-scraper-microservice/api/v1/accounts/update()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/accounts/settings"]["put"]
+    update:
+      x-speakeasy-group: accounts
+      x-speakeasy-name-override: updateSettings
+    x-speakeasy-metadata:
+      after: sdk.accounts.updateSettings()
+      before: sdk..put_/api/lead-scraper-microservice/api/v1/accounts/settings()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organizations/tenants/api-keys/{keyId}"]["get"]
+    update:
+      x-speakeasy-group: apiKeys
+      x-speakeasy-name-override: getTenantDetails
+    x-speakeasy-metadata:
+      after: sdk.apiKeys.getTenantDetails()
+      before: sdk..get_/api/lead-scraper-microservice/api/v1/organizations/tenants/api-keys/{keyId}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/workspace-service/v1/workspaces"]["post"]
+    update:
+      x-speakeasy-group: workspaces
+      x-speakeasy-name-override: generate
+    x-speakeasy-metadata:
+      after: sdk.workspaces.generate()
+      before: sdk..post_/api/workspace-service/v1/workspaces()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspace"]["put"]
+    update:
+      x-speakeasy-group: workspaces
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.workspaces.update()
+      before: sdk..put_/api/lead-scraper-microservice/api/v1/workspace()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/workspace-service/v1/workspaces/{id}"]["delete"]
+    update:
+      x-speakeasy-group: workspaces
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.workspaces.delete()
+      before: sdk..delete_/api/workspace-service/v1/workspaces/{id}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspaces/{workspaceId}/workflows/{id}"]["delete"]
+    update:
+      x-speakeasy-group: workflows
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.workflows.delete()
+      before: sdk..delete_/api/lead-scraper-microservice/api/v1/workspaces/{workspaceId}/workflows/{id}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/workspace-service/v1/workspaces"]["put"]
+    update:
+      x-speakeasy-group: workspaces
+      x-speakeasy-name-override: modify
+    x-speakeasy-metadata:
+      after: sdk.workspaces.modify()
+      before: sdk..put_/api/workspace-service/v1/workspaces()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/jobs"]["get"]
+    update:
+      x-speakeasy-group: jobs
+      x-speakeasy-name-override: getAll
+    x-speakeasy-metadata:
+      after: sdk.jobs.getAll()
+      before: sdk..get_/api/lead-scraper-microservice/api/v1/jobs()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/accounts/{id}"]["delete"]
+    update:
+      x-speakeasy-group: accounts
+      x-speakeasy-name-override: removeById
+    x-speakeasy-metadata:
+      after: sdk.accounts.removeById()
+      before: sdk..delete_/api/lead-scraper-microservice/api/v1/accounts/{id}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/workspace-service/v1/workspaces/list"]["get"]
+    update:
+      x-speakeasy-group: workspaces
+      x-speakeasy-name-override: retrieveList
+    x-speakeasy-metadata:
+      after: sdk.workspaces.retrieveList()
+      before: sdk..get_/api/workspace-service/v1/workspaces/list()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/workspace-service/v1/workspace-sharings/{sharingId}"]["delete"]
+    update:
+      x-speakeasy-group: workspaceSharings
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.workspaceSharings.delete()
+      before: sdk..delete_/api/workspace-service/v1/workspace-sharings/{sharingId}()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organizations/{organizationId}/tenants"]["post"]
+    update:
+      x-speakeasy-group: tenants
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.tenants.create()
+      before: sdk..post_/api/lead-scraper-microservice/api/v1/organizations/{organizationId}/tenants()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspaces/{workspaceId}/workflows/{id}/pause"]["post"]
+    update:
+      x-speakeasy-group: workflows
+      x-speakeasy-name-override: pause
+    x-speakeasy-metadata:
+      after: sdk.workflows.pause()
+      before: sdk..post_/api/lead-scraper-microservice/api/v1/workspaces/{workspaceId}/workflows/{id}/pause()
+      created_at: 1740454329572
+      reviewed_at: 1740454375190
+      type: method-name
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/accounts/settings"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454331818
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/accounts/settings"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454360463
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/accounts/update"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454360463
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/accounts"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454430630
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/accounts"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454437054
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454437054
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/accounts"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454442434
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454442434
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454442434
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/accounts"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454448379
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454448379
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454448379
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys/rotate"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454448379
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/accounts"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454456476
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454456476
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454456476
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys/rotate"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454456476
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/jobs"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454456476
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/accounts"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454462978
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454462978
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454462978
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys/rotate"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454462978
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/jobs"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454462978
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organization"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454462978
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/accounts"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454469913
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454469913
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454469913
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys/rotate"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454469913
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/jobs"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454469913
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organization"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454469913
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organization"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454469913
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/accounts"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454477853
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454477853
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454477853
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys/rotate"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454477853
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/jobs"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454477853
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organization"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454477853
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organization"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454477853
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organizations/tenants"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454477853
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/accounts"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454488298
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454488298
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454488298
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys/rotate"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454488298
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/jobs"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454488298
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organization"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454488298
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organization"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454488298
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organizations/tenants"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454488298
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organizations/tenants/api-keys"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454488298
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/accounts"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454495844
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454495844
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454495844
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/api-keys/rotate"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454495844
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/jobs"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454495844
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organization"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454495844
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organization"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454495844
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organizations/tenants"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454495844
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/organizations/tenants/api-keys"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454495844
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspace"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454495844
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspaces"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454502641
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspaces"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454507207
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/workspace-sharings"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454507207
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspaces"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454513364
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/workspace-sharings"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454513364
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/workspaces"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454513364
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspaces"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454520972
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/workspace-sharings"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454520972
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/workspaces"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454520972
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/workspaces"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454520972
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspaces"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454528203
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/workspace-sharings"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454528203
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/workspaces"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454528203
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/workspaces"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454528203
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/workspaces/{workspaceId}/share"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454528203
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspaces"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454541498
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/accounts"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454541498
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/workspace-sharings"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454541498
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/workspaces"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454541498
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/workspaces"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454541498
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/workspaces/{workspaceId}/share"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454541498
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspaces"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454547367
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/accounts"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454547367
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/accounts"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454547367
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/workspace-sharings"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454547367
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/workspaces"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454547367
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/workspaces"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454547367
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/workspaces/{workspaceId}/share"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454547367
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspaces"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454559065
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspaces/{workspaceId}/workflows/{id}/trigger"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454559065
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/accounts"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454559065
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/accounts"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454559065
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/workspace-sharings"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454559065
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/workspaces"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454559065
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/workspaces"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454559065
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/workspaces/{workspaceId}/share"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454559065
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspaces"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454576386
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspaces/{workspaceId}/workflows/{id}/pause"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454576386
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspaces/{workspaceId}/workflows/{id}/trigger"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454576386
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/accounts"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454576386
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/accounts"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454576386
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/workspace-sharings"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454576386
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/workspaces"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454576386
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/workspaces"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454576386
+      type: user-edit
+  - target: $["paths"]["/api/workspace-service/v1/workspaces/{workspaceId}/share"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454576386
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspaces/{workspaceId}/workflows/{id}/pause"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454600938
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspaces/{workspaceId}/workflows"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454607288
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspaces/{workspaceId}/workflows/{id}/pause"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454607288
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspaces/workflow"]["put"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454611989
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspaces/{workspaceId}/workflows"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454611989
+      type: user-edit
+  - target: $["paths"]["/api/lead-scraper-microservice/api/v1/workspaces/{workspaceId}/workflows/{id}/pause"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1740454611989
+      type: user-edit
+  - target: $
+    update:
+      x-speakeasy-retries:
+        strategy: backoff
+        backoff:
+          initialInterval: 500
+          maxInterval: 60000
+          maxElapsedTime: 1200000
+          exponent: 1.5
+        statusCodes:
+          - 5XX
+        retryConnectionErrors: true
+    x-speakeasy-metadata:
+      created_at: 1740454742494
+      type: user-edit
+  - target: $
+    update:
+      servers:
+        - url: https://159.89.234.169/v1/gateway
+    x-speakeasy-metadata:
+      created_at: 1740454859119
+      type: user-edit

@@ -1,0 +1,38 @@
+speakeasyVersion: 1.502.0
+sources:
+    Lead Scraping Service API:
+        sourceNamespace: lead-scraping-service-api
+        sourceRevisionDigest: sha256:c9001df90eaeac26b0e6d6a03452ea6ee235911162bb798290859ff1b00d3394
+        sourceBlobDigest: sha256:a3802279e935d73f8a306ddb141090246f75f55462a0e61707e2d68ce906ae5d
+        tags:
+            - latest
+            - "1.0"
+targets:
+    oppulence-backend-sdk:
+        source: Lead Scraping Service API
+        sourceNamespace: lead-scraping-service-api
+        sourceRevisionDigest: sha256:c9001df90eaeac26b0e6d6a03452ea6ee235911162bb798290859ff1b00d3394
+        sourceBlobDigest: sha256:a3802279e935d73f8a306ddb141090246f75f55462a0e61707e2d68ce906ae5d
+        codeSamplesNamespace: lead-scraping-service-api-typescript-code-samples
+        codeSamplesRevisionDigest: sha256:dd7dee92823fcc8ff3796963b2859f387934d84a4b0fe3a8fb38cc1bc085593e
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        Lead Scraping Service API:
+            inputs:
+                - location: https://gateway.yoanyombapro.workers.dev/openapi
+            overlays:
+                - location: .speakeasy/speakeasy-modifications-overlay.yaml
+            registry:
+                location: registry.speakeasyapi.dev/oppulence-backend/oppulence/lead-scraping-service-api
+    targets:
+        oppulence-backend-sdk:
+            target: typescript
+            source: Lead Scraping Service API
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/oppulence-backend/oppulence/lead-scraping-service-api-typescript-code-samples
+                labelOverride:
+                    fixedValue: Typescript (SDK)
+                blocking: false
